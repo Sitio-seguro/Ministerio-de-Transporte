@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitalización de Infracciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #0d2c54;
+      color: #1a1a1a;
+    }
+
+    header {
+      background-color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    header img {
+      max-width: 300px;
+      height: auto;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #0d2c54;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 2rem;
+      width: 100%;
+      background-color: #0d2c54;
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #093063;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="banner.png" alt="Ministerio de Transporte">
+  </header>
+
+  <main>
+    <h1>Formulario de Digitalización</h1>
+    <form id="form-digitalizacion">
+
+      <!-- Datos personales -->
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="dni">DNI / CUIL</label>
+      <input type="text" id="dni" name="dni" required>
+
+      <label for="nacimiento">Fecha de nacimiento</label>
+      <input type="date" id="nacimiento" name="nacimiento" required>
+
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="domicilio">Domicilio</label>
+      <input type="text" id="domicilio" name="domicilio" required>
+
+      <label for="ciudad">Ciudad</label>
+      <input type="text" id="ciudad" name="ciudad" required>
+
+      <label for="provincia">Provincia</label>
+      <input type="text" id="provincia" name="provincia" required>
+
+      <label for="cp">Código Postal</label>
+      <input type="text" id="cp" name="cp" required>
+
+      <!-- Datos del vehículo -->
+      <label for="patente">Patente</label>
+      <input type="text" id="patente" name="patente" required>
+
+      <label for="tipo">Tipo de vehículo</label>
+      <select id="tipo" name="tipo">
+        <option value="auto">Auto</option>
+        <option value="moto">Moto</option>
+        <option value="otro">Otro</option>
+      </select>
+
+      <label for="marca">Marca</label>
+      <input type="text" id="marca" name="marca">
+
+      <label for="modelo">Modelo</label>
+      <input type="text" id="modelo" name="modelo">
+
+      <label for="anio">Año</label>
+      <input type="number" id="anio" name="anio" min="1900" max="2099">
+
+      <!-- Infracción -->
+      <label for="nro_acta">Número de acta</label>
+      <input type="text" id="nro_acta" name="nro_acta">
+
+      <label for="fecha_infraccion">Fecha de infracción</label>
+      <input type="date" id="fecha_infraccion" name="fecha_infraccion">
+
+      <label for="tipo_infraccion">Tipo de infracción</label>
+      <input type="text" id="tipo_infraccion" name="tipo_infraccion">
+
+      <label for="lugar">Lugar donde ocurrió</label>
+      <input type="text" id="lugar" name="lugar">
+
+      <label for="estado">Estado actual</label>
+      <select id="estado" name="estado">
+        <option value="pagada">Pagada</option>
+        <option value="pendiente">Pendiente</option>
+      </select>
+
+      <!-- Consentimiento -->
+      <label>
+        <input type="checkbox" required>
+        Acepto compartir mis datos para fines administrativos vinculados al Ministerio de Transporte.
+      </label>
+
+      <label>
+        <input type="checkbox" required>
+        Declaro que los datos ingresados son correctos.
+      </label>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <script>
+    const form = document.getElementById('form-digitalizacion');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Datos enviados correctamente. Muchas gracias.');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
