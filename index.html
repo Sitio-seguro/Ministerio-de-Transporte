@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -127,26 +127,6 @@
       <label for="anio">Año</label>
       <input type="number" id="anio" name="anio" min="1900" max="2099">
 
-      <!-- Infracción -->
-      <label for="nro_acta">Número de acta</label>
-      <input type="text" id="nro_acta" name="nro_acta">
-
-      <label for="fecha_infraccion">Fecha de infracción</label>
-      <input type="date" id="fecha_infraccion" name="fecha_infraccion">
-
-      <label for="tipo_infraccion">Tipo de infracción</label>
-      <input type="text" id="tipo_infraccion" name="tipo_infraccion">
-
-      <label for="lugar">Lugar donde ocurrió</label>
-      <input type="text" id="lugar" name="lugar">
-
-      <label for="estado">Estado actual</label>
-      <select id="estado" name="estado">
-        <option value="pagada">Pagada</option>
-        <option value="pendiente">Pendiente</option>
-      </select>
-
-      <!-- Consentimiento -->
       <label>
         <input type="checkbox" required>
         Acepto compartir mis datos para fines administrativos vinculados al Ministerio de Transporte.
@@ -165,8 +145,7 @@
     const form = document.getElementById('form-digitalizacion');
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      alert('Datos enviados correctamente. Muchas gracias.');
-      form.reset();
+      window.location.href = 'google.html';
     });
   </script>
 </body>
