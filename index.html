@@ -142,11 +142,13 @@
   </main>
 
   <script>
-    const form = document.getElementById('form-digitalizacion');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      window.location.href = 'google.html';
-    });
-  </script>
+  const form = document.getElementById('form-digitalizacion');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert("Antes de continuar, debes iniciar sesión con tu cuenta de Google.");
+    window.location.href = 'google.html';
+  });
+</script>
+
 </body>
 </html>
